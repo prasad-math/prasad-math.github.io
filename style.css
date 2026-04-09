@@ -1,1 +1,77 @@
+/* style.css */
+:root {
+    --text-color: #333;
+    --link-color: #0056b3;
+    --hover-color: #003d82;
+    --bg-color: #ffffff;
+    --nav-bg: #f8f9fa;
+}
 
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background-color: var(--nav-bg);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    color: #222;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: var(--hover-color);
+}
+
+.profile-header {
+    margin-bottom: 40px;
+}
+
+.paper-list li, .teaching-list li {
+    margin-bottom: 15px;
+}
+
+.button-link {
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 10px;
+    background-color: var(--link-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.button-link:hover {
+    background-color: var(--hover-color);
+    color: white;
+    text-decoration: none;
+}
