@@ -1,113 +1,59 @@
-/* style.css */
 :root {
-    --text-color: #333;
-    --link-color: #0056b3;
-    --hover-color: #003d82;
-    --bg-color: #ffffff;
-    --nav-bg: #f8f9fa;
+    --text-color: #222;
+    --link-color: #19598b;
+    --border-color: #ddd;
 }
-
+* { box-sizing: border-box; }
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 22px;
+    font: 17px/1.65 Georgia, "Times New Roman", serif;
     color: var(--text-color);
-    background-color: var(--bg-color);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    background: #fff;
 }
-
+h1, h2, h3 { line-height: 1.3; }
+h1 { margin-bottom: 1rem; }
+h2 {
+    margin-top: 2.4rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: .4rem;
+}
+a { color: var(--link-color); }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--link-color); outline-offset: 4px; }
+.site-name { color: inherit; text-decoration: none; }
 nav {
-    background-color: var(--nav-bg);
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 30px;
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: .5rem 18px;
+    margin-bottom: 2rem;
 }
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    font-size: 1.1em;
+nav a[aria-current="page"] { font-weight: bold; }
+li { margin: .8rem 0; }
+.paper-list { padding-left: 1.5rem; }
+.paper-list li { margin-bottom: 1.5rem; }
+.profile-header { margin-bottom: 40px; }
+.short-cv-section { margin-top: 30px; }
+.table-wrap { overflow-x: auto; }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
 }
-
-nav a:hover {
-    color: var(--link-color);
-    text-decoration: underline;
+th, td {
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 8px;
 }
-
-h1, h2, h3 {
-    color: #222;
-}
-
-a {
-    color: var(--link-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-    color: var(--hover-color);
-}
-
-.profile-header {
-    margin-bottom: 40px;
-}
-
-.paper-list li, .teaching-list li {
-    margin-bottom: 15px;
-}
-
-.button-link {
-    display: inline-block;
-    padding: 8px 15px;
-    margin-right: 10px;
-    background-color: var(--link-color);
-    color: white;
-    border-radius: 4px;
-    font-weight: bold;
-}
-
-.button-link:hover {
-    background-color: var(--hover-color);
-    color: white;
-    text-decoration: none;
-}
-
-/* Short CV layout */
-.short-cv-section {
-    margin-top: 30px;
-}
-
-.cv-list {
-    list-style-type: none; /* Removes the bullet points */
-    padding-left: 0;
-}
-
-.cv-list li {
-    display: flex;
-    margin-bottom: 15px;
-}
-
-.cv-year {
-    flex: 0 0 140px; /* Keeps the dates aligned in a fixed-width column */
-    font-weight: 600;
-    color: var(--text-color);
-}
-
-.cv-details {
-    flex: 1; /* Allows the description to take up the rest of the space */
-}
-
-/* Make it stack neatly on small mobile screens */
-@media (max-width: 500px) {
-    .cv-list li {
-        flex-direction: column;
-    }
-    .cv-year {
-        margin-bottom: 5px;
-        color: var(--link-color);
-    }
+.cv-list { padding-left: 1.5rem; }
+.cv-list li { display: block; }
+.cv-year { font-weight: bold; }
+.cv-details { margin-top: .15rem; }
+@media (max-width: 600px) {
+    body { margin: 24px auto; padding: 0 18px; }
+    table { font-size: 14px; }
+    th, td { padding: 8px 6px; }
+    nav { gap: .5rem 16px; }
 }
