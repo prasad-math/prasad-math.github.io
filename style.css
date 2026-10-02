@@ -3,6 +3,7 @@
     --link-color: #19598b;
     --border-color: #ddd;
 }
+html { background-color: #FAF7F2; }
 * { box-sizing: border-box; }
 body {
     max-width: 850px;
